@@ -5,13 +5,16 @@ import Slider from "../Slider/Slider";
 import ArticleHome from "../ArticleHome";
 import { TabTitle } from "../Utils/Genfn";
 import Secretary from "../Secretary";
+import Hometop from "../Hometop";
+import Timer from "../Timer";
 
 export default function () {
   TabTitle("NITSMUN >> Home");
   return (
     <>
-      <div className="dummy">
-        <h1>hello</h1>
+      <div>
+        <Hometop/>
+        <Timer/>
       </div>
       <br />
       <br />
