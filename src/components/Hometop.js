@@ -1,4 +1,5 @@
 import "./Hometop.css"
+import { Link } from "react-router-dom";
 const Hometop = () => {
     return ( 
         <div>
@@ -6,14 +7,17 @@ const Hometop = () => {
                 <div className="hometop-img">
                     <img src="./Images\logo-nitsmun.png" alt="NITSMUN" />
                 </div>
-                <div>
-                    <ul style={{color : 'white'}}>Early registrations for Junior MUN is now open!</ul>
-                </div>
-                <div><a href="">Register now</a></div>
              </div>
-        <div className="hometop-juniormun">
-            <ul>NITS JUNIOR MUN</ul>
-        </div>
+             <div className="hometop-apply">
+
+                <div className="hometop-reg">
+                    <ul style={{color : 'white'}}>Early registrations for <strong style={{color : 'rgb(45, 210, 255)'}}>Junior MUN</strong> is now open!</ul>
+                </div>
+                <div className="hometop-link1"><Link to={"/Apply"}><button className="hometop-link1btn">Register Now</button></Link></div>
+            
+             
+             </div>
+        
 
 
 

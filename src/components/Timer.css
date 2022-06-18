@@ -3,7 +3,7 @@ div#timer {
     position: relative;
     top: 0;
     left: 0;
-    margin: 10vh auto 2vh auto;
+    margin: 1vh auto 2vh auto;
   
     /**Dimensions**/
     width: 65%;
@@ -20,16 +20,17 @@ div#timer {
     align-items: center;
   
     /**Content**/
-    color: var(--color-8-100);
+    color: white;
     padding: 2vh 5vh;
   
-    background-color: brown;
+    /* background-image: linear-gradient(#ee0970, #ff6a00); */
+    background: linear-gradient(135deg, #e2564f 0%, #360940 100%);
   }
   
   div#timer div.timer-limit {
     width: 100%;
   
-    color: var(--color-1-100);
+    color: rgb(255, 255, 255);
     text-align: center;
     margin-bottom: 3vh;
     font-size: 2.9vh;
@@ -37,7 +38,7 @@ div#timer {
   
   div#timer div.timer-int {
     padding: 0 5vh;
-    color: var(--color-1-100);
+    color: rgb(245, 249, 255);
   }
   
   div.timer-int div.timer-int-value {
@@ -45,7 +46,7 @@ div#timer {
     font-size: 6.5vh;
     transition: 0.2s;
     font-weight: bold;
-    color: var(--color-6-100);
+    color: rgb(255, 255, 255);
   }
   
   div.timer-int div.timer-int-label {
