@@ -1,243 +1,570 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: 'Montserrat', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+.event-pic{
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 60vh;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 .event-pic img{
-    width: 100%;
-    position: relative;
-    height: 50vh;
-    box-sizing: border-box;
-    overflow: hidden;
-    width: 100%;
-    background-color: rgba(0,0,0,0.2);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  z-index: -10;
+  min-height: 100%;
 }
-.event-pic {
-    margin-bottom: 25px;
+
+.event-title h1 {
+  color: var(--color-1-100);
+  font-weight: 900;
+  font-size: 5.5vh;
+  font-family: 'Poppins', sans-serif;
 }
-.event-title h1{
-    color: #03989e;
-    font-weight: bolder;
-    font-size: 5vh;
+
+.event-title {
+  border-bottom: 0.2vh solid var(--color-1-100);
+  width: 60%;
+  text-align: center;
+  margin: 5vh auto 8vh;
 }
-.event-title{
-    border-bottom: 0.2vh solid #3ca06a;
-    width: 60%;
-    text-align: center;
-    margin: 5vh auto 8vh;
+
+.event-details {
+  margin: 2.2155rem 7.0609375rem 5vh;
+  color: #161c2f;
+  font-size: 2.3vh;
+  line-height: 2;
+  text-align: justify;
+  text-align-last: left;
+  font-weight: 600;
 }
-.event-details{
-    margin: 35.448px 112.975px 5vh;
-    color: #161c2f;
-    font-size: 2.3vh;
-    line-height: 2.0;
-    text-align: justify;
-    text-align-last: left;
-    font-weight: 600;
-}
-@media only screen and (max-width: 1000px){
-    .event-details{
-        margin: 26.264px 18.7625px 37.52px;
-        line-height: 1.8;
-        font-size: 17.712px;
-    }
-    .event pic{
-        height: 10vw;
-    }
-    .event-title{
-        margin-bottom: 3vh;
-    }
-    .event-title h1{
-        font-size: 22.512px;
-        font-weight: 900;
-    }
-}
-/* .junmun-partners{
-    margin-bottom: 4vh;
-}
-.junmunpart-heading{
-    text-align: center;
-}
-.junmunpart-heading h1{
+
+@media only screen and (max-width: 1000px) {
+  .event-details {
+    margin: 1.6415rem 1.17265625rem 2.345rem;
+    line-height: 1.8;
+    font-size: 1.107rem;
+  }
+
+  .event-pic{
+    height: 50vw;
+  }
+  .event-pic img{
+  max-height: 100%;
+  width: 100%;
+  top: 60%;
+  }
+
+  .event-title {
+    margin-bottom: 3vh;
+  }
+
+  .event-title h1 {
+    font-size: 1.407rem;
     font-weight: 900;
-    color: #e2564f;
-    font-size: 40px;
-}
-.junmun-flexing, .partner1, .partner2{
-    display: flex;
-}
-.part-indi1 img{
-    border-radius: 50%;
-    width: 100px;
-}
-.part-indi2 img{
-    border-radius: 50%;
-    width: 100px;
-} */
-.commitees-heading{
-    text-align: center;
-    color: #03989e;
-}
-.junmun-agendas{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5vh;
-    /* background-color: rgba(78, 48, 9, 0.484); */
-    background-color: #0c5160;
-    padding: 2.5em 0;
+  }
 }
 
-.agenda{
-    background: linear-gradient(135deg, #06553d 0%, #159d9d 100%);
+@media only screen and (min-device-width: 1000px) and (max-device-width: 1024px){
+  .event-pic{
+    height: 40vw;
+  }
+}
+@media only screen and (max-width:320px){
+  .event-pic{
+    height: 55vw;
+  }
+
+  .event-pic img{
+    top: 65%;
+  }
+
+  .event-details{
+    font-size: 0.8rem;
+  }
+}
+
+.commitees-heading {
+  text-align: center;
+  color: var(--color-1-100);
+  margin-top: 10vh; /* previously 5vh*/
+  font-variant: small-caps;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  /* font-family: 'Poppins', sans-serif; */
+}
+
+.junmun-agendas {
+  display: flex;
+  margin-top: 6.9vh;
+  background-color: var(--color-12-100);
+  padding: 2.5rem 0;
+  padding-top: 1rem !important;
+  width: 100%;
+     position: relative;
+     justify-content: space-evenly;
+     flex-direction: row;
+}
+
+.agenda {
+  background-color: var(--color-13-100);
+  border-radius: 1.5625em;
+  margin: 2rem 0rem;
+  border: 4px solid #161c2f;
     width: 30%;
-    border-radius: 1.5625em;
-    margin: 0 2.5em;
-}
-.title01-container{
-    text-align: center;
-    padding: 0 3.125em;
-    text-align: center;
-    /* text-align-last: left; */
-    line-height: 1.6;
-    margin: 1.8em 0;
-    height: 2em;
-}
-.title01-container h2{
-    font-size: 1.05em;
-    color: whitesmoke;
-    font-family: 'Montserrat', sans-serif;
-    /* line-height: 1.4; */
-    /* letter-spacing: 0.2px; */
 }
 
-@media only screen and (max-width: 540px)
-/* @media (min-width: 481px) and (max-width: 767px)  */
-{
-    .junmun-agendas {
-      display: block;
-      justify-content: space-between;
-    }
-    .agenda {
-      width: 80%;
-      /* margin: 20px; */
-      margin: 1.25em auto;
-    }
-    /* .title01-container {
-        height: 2.5em;
-    } */
-    /* .agenda img{
-        width: 18.75em;
-    } */
-    .title01-container h2{
-        font-size: 0.9em;
-    }
-    .title01-container{
-        padding-top: 10px;
-        padding-bottom: 20px;
-    }
-    .agendapara-container p{
-        font-size: 0.8em;
-    }
-    .agenda-only{
-        font-size: 0.7em;
-        margin: 0em 0;
-    }
-    .junmun2021{
-        font-size: 0.6em;
-        padding: 0 10px;
-    }
+.agenda img {
+  width: 90%;
+  object-fit: contain;
+  pointer-events: none;
 }
-.agenda-only{
-    text-align: center;
-    margin: 0.625em 0;
-    color: white;
+
+.title01-container {
+  text-align: center;
+  padding: 0 3rem;
+  text-align: center;
+  line-height: 1.6;
+  margin: 1rem 0;
+  font-variant: small-caps;
 }
-.agendapara-container{
-    color: white;
+
+.title01-container h2 {
+  font-size: 1.4rem;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.agenda-only {
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  font-weight: 900 !important;
+}
+
+.agendapara-container {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  color: white;
+  font-size: 1.1rem;
+  text-align: justify;
+  text-align-last: left;
+  padding: 0 3.125rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+
+.agenda-only {
+  text-align: center;
+  margin: 0.625em 0;
+  color: white;
+}
+
+.container-junmun2021 {
+  padding-bottom: 10px;
+}
+.junmun2021 {
+  text-align: center;
+  padding-top: 0vh; /*4vh */
+  color: var(--color-1-100);
+  font-variant: small-caps;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.images-junmun21 img {
+  width: 350px;
+  margin: 10px 10px;
+  border-radius: 10px;
+  pointer-events: none;
+}
+.images-junmun21 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 600px) {
+  .images-junmun21 img {
+    margin: 10px auto;
+    width: 90%;
+  }
+  .junmun2021 {
+    font-size: 0.8em;
+  }
+}
+
+.faq-section{
+  font-size: 2rem;
+  font-weight: bolder;
+  padding: 2rem 0;
+  text-align: center;
+  color: white;
+}
+
+.faq-section h1{
+  color: var(--color-1-100);
+}
+@media only screen and (max-width:991px){
+  .faq-section{
+      font-size: 1.2rem;
+      padding: 1.6rem 0 1rem 0;
+  }
+}
+
+.agenda a{
+  color: white;
+  /* font-size: 1.2rem; */
+  font-size: 0.88rem;
+  background-color: var(--color-1-100);
+  /* width: 40%; */
+  text-align: center;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  transition: all 0.4s ease-in;
+}
+
+.agenda a:hover{
+  background-color: var(--color-6-100);
+  color: var(--color-1-100);
+  font-weight: bolder;
+}
+
+.agenda a:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem #e2564f;
+  transition: 0.5s;
+}
+.agenda a:active
+        {
+            box-shadow: 1px 1px 1px 1px #e2564f;
+            transform: translateY(2px);
+        } 
+
+@media only screen and (max-width:991px){
+  .agenda a{
     font-size: 1rem;
-    line-height: 1.6;
-    text-align: justify;
-    text-align-last: left;
-    padding: 0 3.125em;
-    margin-bottom: 0.9em;
-}
-.agenda img{
-    /* width: 21.875em; */
-    width: 100%;
-  max-width: 100%;
-  padding: 0 30px;
-}
-@media only screen and (max-width:540px)
-/* @media (min-width: 481px) and (max-width: 767px)  */
-{
-    .agendapara-container{
-        padding:0 20px 20px 20px;
-    }
-    .junmun-agendas{
-margin-top: 2vh;
-padding: 0.8em 0;
-    }
-}
-@media only screen and (min-device-width: 541px) and (max-device-width: 1279px){
-       .junmun-agendas{
-        display: block;
-       }
-       .agenda{
-        width: 80%;
-        margin: 1.25em auto;
-       }
-       .junmun-agendas{
-        margin-top: 2vh;
-        padding: 1.2em 0;
-            }
-            .title01-container h2{
-                font-size: 0.9em;
-            }
-            .title01-container{
-                padding-top: 15px;
-                padding-bottom:0px;
-            }
-            .agenda-only{
-                font-size: 0.9em;
-                margin: 0.5em 0;
-            }
-            .agendapara-container p{
-                font-size: 1.2em;
-            }
-            .agendapara-container{
-                padding:0 20px 20px 15px;
-            }
-}
-.container-junmun2021{
-    padding-bottom: 10px;
-}
-.junmun2021{
-    text-align: center;
-    padding-top: 5vh;
-    color: #03989e;
+    width: 60%;
+    padding: 0.8rem 1.2rem;
+  }
 }
 
-.images-junmun21 img{
-    width: 350px;
-    margin: 10px 10px;
-    border-radius: 10px;
+@media only screen and (max-width:356px){
+  .agenda a{
+    font-size: 0.7rem;
+    width: 70%;
+    padding: 0.8rem 1.0rem;
+  }
 }
-.images-junmun21{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap
+
+.btn-junior{
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2rem !important;
+  background-color: var(--color-12-100);
+  width: 50%;
+  border-radius: 7px;
+  box-shadow: 0.1rem 0px 0.2rem 0.2rem grey;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 0;
+  color: rgb(82, 80, 80);
 }
-@media screen and (max-width:600px){
-    .images-junmun21 img{
-        margin: 10px auto;
-        width: 90%;
-    }
-    .junmun2021{
-        font-size: 0.8em;
-    }
+
+.btn-junior button{
+  margin: 0 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  font-family: var(--font5);
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.active, .btn:hover {
+background-color: var(--color-6-100);
+transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95);
+color: var(--color-1-100);
+font-weight: bolder;
+border-radius: 5px;
+cursor: pointer;
+padding-left: 1rem;
+padding-right: 1rem;
+}
+
+@media only screen and (max-width:660px){
+  .btn-junior{
+    width: 85%;
+    padding: 0.8rem 0;
+}
+
+.btn-junior button{
+  margin: 0 0.1rem;
+  font-size: 0.9rem;
+}
+
+.active .btn:hover{
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+}
+}
+
+@media only screen and (max-width:320px){
+  .btn-junior button{
+    font-size: .5rem;
+}
+}
+
+.exe-cont{
+  display: block;
+  flex-wrap: wrap;
+  scroll-behavior: smooth;
+  width: 100%;
+  margin-top: -1rem;
+}
+
+@media only screen and (max-width:660px){
+  .exe-cont{
+    margin-top: 2rem;
+  }
+}
+
+
+@media only screen and (max-width:320px){
+  .exe-cont{
+    margin-top: 1.5rem;
+}
+}
+
+.exe-all {
+  position: relative;
+  column-count: 3;
+  margin: 4%;
+  gap: 1%;
+}
+
+
+@media screen and (max-width: 768px) {
+  .exe-all {
+      column-count: 2;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .exe-all {
+      column-count: 1;
+  }
+}
+
+.image-all {
+  display: inline-block;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.image-all img {
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.47, 0, 0.745, 0.715);
+  opacity: 0.89;
+}
+
+.image-all img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.partner-head, .jdv-head{
+  display: inline-block;
+  width: 40%;
+  margin: 2.5rem auto;
+  padding: 1rem 0;
+}
+
+.jdv-head{
+  margin-top: 6rem !important;
+}
+
+@media only screen and (max-width:660px){
+  .jdv-head{
+    margin-top: 3rem !important;
+  }
+
+}
+
+.partner-head h1, .jdv-head h1{
+  /* border-bottom: 1px dashed var(--color-1-100); */
+  color: var(--color-1-100);
+  /* font-size: 1.66rem; */
+  font-weight: 900;
+  font-variant: small-caps;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.partner-list{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 5rem;
+  margin-top: 10vh;
+}
+
+.partner-img{
+ display: inline-block;
+ overflow: hidden;
+}
+
+.partner-img img{
+  width: 50%;
+  pointer-events: none;
+}
+
+.jdv-list{
+  margin-bottom: 10vh !important;
+}
+.jdv-list img{
+  width: 15rem;
+  pointer-events: none;
+}
+
+@media only screen and (max-width:660px){
+  .jdv-list img{
+    width: 12rem;
+  }
+}
+.partner-about, .jdv-about{
+  margin-top: 3vh;
+}
+.partner-indi h2, .jdv-about h2{
+  color: var(--color-8-100);
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width:660px){
+
+.partner-head, .jdv-head{
+  width: 70%;
+  margin-bottom: 0 !important;
+}
+
+  .partner-head h1, .jdv-head h1{
+    font-size: 1.2rem;
+  }
+
+  .partner-list{
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .partner-indi{
+    margin: 2rem 0;
+  }
+
+  .partner-about, .jdv-about{
+    margin-top: 1rem;
+  }
+
+  .partner-about h2, .jdv-about h2{
+    font-size: 1rem;
+  }
+}
+
+.juv{
+  margin-top: 15vh;
+}
+
+@media only screen and (max-width:660px){
+  .juv{
+    margin-top: 8vh;
+  }
+}
+
+@media only screen and (min-device-width: 541px) and (max-device-width: 1279px){
+  .junmun-agendas{
+    margin-top: 3rem !important;
+  }
+
+  .title01-container{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .agendapara-container{
+    font-size: 1rem;
+    line-height: 1.6 !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  .agenda a{
+    font-size: 0.8rem;
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+@media only screen and (max-width:991px){
+  .junmun-agendas{
+    flex-wrap: wrap;
+  }
+
+  .agenda{
+    width: 45%;
+    margin: 1.25rem auto;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .commitees-heading {
+    margin-top: 6vh;
+    font-size: 1.2rem;
+  }
+
+  .junmun-agendas {
+    flex-direction: column;
+    margin-top: 2vh;
+    padding:0.8rem 0 2.5rem 0;
+  }
+
+  .agenda {
+    width: 90%;
+    margin: 1.25em auto 0 auto;
+  }
+
+  .title01-container h2 {
+    font-size: 1.2rem;
+  }
+  .title01-container {
+    padding: 0.1875rem 1.4rem;
+  }
+  .agendapara-container {
+    padding: 0 1.875rem 1.25rem 1.875rem;
+    margin-bottom: 0.5rem;
+  }
+  .agendapara-container p {
+    font-size: 0.8em;
+  }
+  .agenda-only {
+    font-size: 0.7em;
+    margin: 1rem 0;
+  }
+  .junmun2021 {
+    font-size: 0.6em;
+    padding: 0 0.625rem;
+  }
 }
